@@ -1,0 +1,26 @@
+#docker pull postgres:alpine
+
+docker run --name postgresql -e POSTGRES_PASSWORD=21735 -d -p 8083:5432 postgres:alpine
+
+./gradlew build -x test
+
+docker build --no-cache -t trainingmanagerbackend .
+
+docker run -itd -p 8081:8081 --rm --name dockertmbackend trainingmanagerbackend
+
+docker build --no-cache -t dockerreact .
+
+winpty docker run -it --rm -v ${PWD}:/app -v /app/node_modules -p 3000:3000 --name dockertmfrontend dockerreact
+docker run -itd --rm -v "%cd%":/app -v /app/node_modules -p 3000:3000 --name dockertmfrontend dockerreact
+
+#docker run -it -v $PWD:/e2e -w /e2e cypress/included:3.2.0
+#docker run -it -v "%cd%":/e2e -w /e2e cypress/included:3.2.0
+
+docker run -it -v $PWD:/e2e -w /e2e -e CYPRESS_baseUrl=http://host.docker.internal:3000 --name dockercy cypress/included:3.2.0
+docker run -it -v "%cd%":/e2e -w /e2e -e CYPRESS_baseUrl=http://host.docker.internal:3000 --name dockercy cypress/included:3.2.0
+
+docker exec -it dockertmfrontend sh
+
+docker stop dockertmfrontend
+
+docker stop dockertmbackend

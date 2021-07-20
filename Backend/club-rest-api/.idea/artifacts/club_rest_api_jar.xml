@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="club-rest-api:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/club_rest_api_jar</output-path>
+    <root id="archive" name="club-rest-api.jar" />
+  </artifact>
+</component>

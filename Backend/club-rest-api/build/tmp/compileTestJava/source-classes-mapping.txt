@@ -1,0 +1,12 @@
+com/rusnac/clubrestapi/controller/impl/TrainingTest.java
+ com.rusnac.clubrestapi.controller.impl.TrainingTest
+com/rusnac/clubrestapi/controller/impl/UserIntegrationTest.java
+ com.rusnac.clubrestapi.controller.impl.UserIntegrationTest
+com/rusnac/clubrestapi/controller/impl/ExerciseTest.java
+ com.rusnac.clubrestapi.controller.impl.ExerciseTest
+com/rusnac/clubrestapi/service/impl/ExerciseUnitTest.java
+ com.rusnac.clubrestapi.service.impl.ExerciseUnitTest
+com/rusnac/clubrestapi/service/impl/UserUnitTest.java
+ com.rusnac.clubrestapi.service.impl.UserUnitTest
+com/rusnac/clubrestapi/service/impl/TrainingUnitTest.java
+ com.rusnac.clubrestapi.service.impl.TrainingUnitTest

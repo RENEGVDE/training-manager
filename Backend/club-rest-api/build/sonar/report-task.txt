@@ -1,0 +1,6 @@
+projectKey=Club_Manager
+serverUrl=http://localhost:9009
+serverVersion=8.8.0.42792
+dashboardUrl=http://localhost:9009/dashboard?id=Club_Manager
+ceTaskId=AXoUtKNyv7fiMOxbr8B5
+ceTaskUrl=http://localhost:9009/api/ce/task?id=AXoUtKNyv7fiMOxbr8B5
